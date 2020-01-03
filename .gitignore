@@ -402,3 +402,5 @@ kbe/tools/server/guiconsole/guiconsole.iobj
 kbe/tools/server/guiconsole/guiconsole.ipdb
 kbe/tools/server/guiconsole/python37.dll
 /kbe/src/.vs
+/server_assets/kbengine_ue4_plugins
+/server_assets/kbengine_unity3d_plugins
