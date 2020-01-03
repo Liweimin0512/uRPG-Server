@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a1961271-8c6f-4591-93f9-cf003fde91a2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../../Client/Content/MMORPG/Characters/Player/BP_PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Client/Content/MMORPG/Characters/Player/BP_PlayerCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Client/Content/MMORPG/Core/Characters/Bp_Entity.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Client/Content/MMORPG/Core/Characters/Bp_Entity.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Client/Content/MMORPG/Core/GameMode/Bp_MainGameMode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Client/Content/MMORPG/Core/GameMode/Bp_MainGameMode.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Client/Content/MMORPG/Maps/Login/Login.umap" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Client/Content/MMORPG/Maps/Login/Login.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../res/server/kbengine.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../res/server/kbengine.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="1SW2zHMmKyprYzQfDQIO9PRPsm1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../data" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\uRPG\Server\server_assets\scripts\cell\interfaces" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\uRPG\Server\server_assets\scripts\data" />
+      <recent name="C:\Users\Administrator\Desktop\uRPG\Server\server_assets\scripts\entity_defs\interfaces" />
+      <recent name="C:\Users\Administrator\Desktop\uRPG\Server\server_assets\scripts\entity_defs" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a1961271-8c6f-4591-93f9-cf003fde91a2" name="Default Changelist" comment="" />
+      <created>1571665292285</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571665292285</updated>
+      <workItem from="1571665296938" duration="2024000" />
+      <workItem from="1571698640817" duration="3339000" />
+      <workItem from="1571753131771" duration="357000" />
+      <workItem from="1571786165827" duration="3370000" />
+      <workItem from="1571868300059" duration="2784000" />
+      <workItem from="1571872776647" duration="860000" />
+      <workItem from="1572004321190" duration="2859000" />
+      <workItem from="1573308223500" duration="3159000" />
+      <workItem from="1573349839741" duration="4915000" />
+      <workItem from="1573380939413" duration="10761000" />
+      <workItem from="1573479543041" duration="4560000" />
+      <workItem from="1573567254770" duration="1385000" />
+      <workItem from="1573601480161" duration="1246000" />
+      <workItem from="1573885657944" duration="2644000" />
+      <workItem from="1573991895860" duration="479000" />
+      <workItem from="1574258326488" duration="1910000" />
+      <workItem from="1574518994193" duration="1667000" />
+      <workItem from="1574590324092" duration="5283000" />
+      <workItem from="1574845448054" duration="7875000" />
+      <workItem from="1576980509438" duration="1379000" />
+      <workItem from="1577009171602" duration="3495000" />
+      <workItem from="1577112834505" duration="32000" />
+      <workItem from="1577112878235" duration="1403000" />
+      <workItem from="1577195386344" duration="1198000" />
+      <workItem from="1577281021054" duration="4225000" />
+      <workItem from="1577533108349" duration="9890000" />
+      <workItem from="1577601627655" duration="3870000" />
+      <workItem from="1577620797590" duration="3044000" />
+      <workItem from="1577887056053" duration="922000" />
+      <workItem from="1577981147196" duration="1166000" />
+      <workItem from="1578054007735" duration="1248000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
