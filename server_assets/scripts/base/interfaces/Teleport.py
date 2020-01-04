@@ -3,7 +3,6 @@ import KBEngine
 import GlobalConst
 import d_race
 import d_spaces
-import d_avatar_inittab
 from KBEDebug import *
 
 

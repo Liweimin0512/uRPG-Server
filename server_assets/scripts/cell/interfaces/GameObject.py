@@ -4,9 +4,7 @@ import d_spaces
 import SCDefine
 import GlobalDefine
 from KBEDebug import *
-
 import d_entities
-import d_avatar_inittab
 
 
 class GameObject:
@@ -43,7 +41,8 @@ class GameObject:
 
     def getDatas(self):
         if self.isPlayer():
-            return d_avatar_inittab.datas[self.uid]
+            pass
+            # return d_avatar_inittab.datas[self.uid]
 
         return d_entities.datas[self.uid]
 

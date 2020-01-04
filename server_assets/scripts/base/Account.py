@@ -69,7 +69,7 @@ class Account(KBEngine.Proxy):
             "raceType": raceType,
             "level": 1,
             "spaceUType": spaceUType,
-            "position": spaceData.get("spawnPos", (0, -5, -10)),
+            "position": spaceData.get("spawnPos", (100, 100, 100)),
         }
 
         avatar = KBEngine.createEntityLocally("Avatar", props)
