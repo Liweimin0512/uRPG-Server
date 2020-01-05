@@ -69,6 +69,7 @@ class Account(KBEngine.Proxy):
             "raceType": raceType,
             "level": 1,
             "spaceUType": spaceUType,
+            "direction"		: (0, 0, 0),
             "position": spaceData.get("spawnPos", (100, 100, 100)),
         }
 
@@ -142,6 +143,7 @@ class Account(KBEngine.Proxy):
         # INFO_MSG("account[%i] entities enable. entityCall:%s"
         #          % (self.id, self.client, self.getClientType(), self.getClientDatas(), self.activeAvatar,
         #             self.__ACCOUNT_NAME__))
+        INFO_MSG("account{} entities enable. entityCall:{}".format(self.id, self.activeAvatar))
 
     def onLogOnAttempt(self, ip, port, password):
         """

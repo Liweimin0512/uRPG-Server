@@ -93,8 +93,8 @@ class Avatar(KBEngine.Entity,
         if type == 0:
             pass
 
-        self.fullPower()
-        self.changeState(GlobalDefine.ENTITY_STATE_FREE)
+        # self.fullPower()
+        # self.changeState(GlobalDefine.ENTITY_STATE_FREE)
 
     def jump(self, exposed):
         """
@@ -104,19 +104,21 @@ class Avatar(KBEngine.Entity,
         if exposed != self.id:
             return
 
-        self.otherClients.onJump()
+        # self.otherClients.onJump()
 
     def onAddEnemy(self, entityID):
         """
         virtual method.
         有敌人进入列表
         """
-        if not self.isState(GlobalDefine.ENTITY_STATE_FIGHT):
-            self.changeState(GlobalDefine.ENTITY_STATE_FIGHT)
+        pass
+        # if not self.isState(GlobalDefine.ENTITY_STATE_FIGHT):
+        #     self.changeState(GlobalDefine.ENTITY_STATE_FIGHT)
 
     def onEnemyEmpty(self):
         """
         virtual method.
         敌人列表空了
         """
-        self.changeState(GlobalDefine.ENTITY_STATE_FREE)
+        pass
+        # self.changeState(GlobalDefine.ENTITY_STATE_FREE)

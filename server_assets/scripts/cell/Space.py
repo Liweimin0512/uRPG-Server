@@ -48,5 +48,3 @@ class Space(KBEngine.Entity, GameObject):
         离开场景
         """
         DEBUG_MSG('Space::onLeave space[%d] entityID = %i.' % (self.spaceUType, entityID))
-
-
