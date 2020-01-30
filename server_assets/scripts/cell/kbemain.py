@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 import KBEngine
 from KBEDebug import *
+import dialogmgr
+import skills
 
 def onInit(isReload):
 	"""
@@ -8,6 +10,8 @@ def onInit(isReload):
 	当引擎启动后初始化完所有的脚本后这个接口被调用
 	"""
 	DEBUG_MSG('onInit::isReload:%s' % isReload)
+	dialogmgr.onInit()
+	skills.onInit()
 	
 def onGlobalData(key, value):
 	"""
@@ -41,13 +45,26 @@ def onSpaceData( spaceID, key, value ):
 	"""
 	KBEngine method.
 	spaceData改变
+	@spaceID:  数据被设置在这个spaceID的space中.  
+	@key:  被设置的key.  
+	@value:  被设置的值， 如果值被删除则为None.  
 	"""
-	pass
+	DEBUG_MSG('onSpaceData: spaceID=%s, key=%s, value=%s.' % (spaceID, key, value))
 	
-def onAllSpaceGeometryLoaded( spaceID, isBootstrap, mapping ):
+def onSpaceGeometryLoaded(spaceID, mapping):
 	"""
 	KBEngine method.
 	space 某部分或所有chunk等数据加载完毕
 	具体哪部分需要由cell负责的范围决定
 	"""
-	pass
+	DEBUG_MSG('onSpaceGeometryLoaded: spaceID=%s, mapping=%s.' % (spaceID, mapping))
+	
+def onAllSpaceGeometryLoaded(spaceID, isBootstrap, mapping):
+	"""
+	KBEngine method.
+	space 某部分或所有chunk等数据加载完毕
+	具体哪部分需要由cell负责的范围决定
+	"""
+	DEBUG_MSG('onAllSpaceGeometryLoaded: spaceID=%s, isBootstrap=%i, mapping=%s.' % (spaceID, isBootstrap, mapping))
+	
+

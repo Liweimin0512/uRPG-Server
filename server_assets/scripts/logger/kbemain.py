@@ -7,6 +7,7 @@ from KBEDebug import *
 logger进程主要处理KBEngine服务端的日志保存工作。
 """
 
+
 def onLoggerAppReady():
 	"""
 	KBEngine method.

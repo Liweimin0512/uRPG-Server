@@ -6,7 +6,7 @@ from Poller import Poller
 
 """
 interfaces进程主要处理KBEngine服务端与第三方平台的接入接出工作。
-(注意：由于interfaces是一个单线程服务器，如果需要使用python的http服务器库，建议使用异步的（例如：Tornado），否则会卡主线程造成阻塞。对外http请求可以使用KBEngine.urlopen异步请求。))
+(注意：由于interfaces是一个单线程服务器，如果需要使用python的http服务器库，建议使用异步的（例如：Tornado），否则会卡主线程造成阻塞。对外http请求可以使用KBEngine.urlopen异步请求。)
 目前支持几种功能:
 1: 注册账号
 	当客户端请求注册账号后，请求会由loginapp转发到dbmgr，如果dbmgr挂接了interfaces，则dbmgr将请求转发至这里（KBEngine.onRequestCreateAccount）
@@ -49,6 +49,10 @@ def onTick(timerID):
 	"""
 	INFO_MSG('onTick()')
 
+	# 测试数据库查询
+	KBEngine.executeRawDatabaseCommand("select * from kbe_accountinfos limit 3;", onSqlCallback)
+	KBEngine.urlopen("https://www.baidu.com", onHttpCallback)
+
 def onInterfaceAppShutDown():
 	"""
 	KBEngine method.
@@ -80,7 +84,8 @@ def onRequestCreateAccount(registerName, password, datas):
 	# 此处可通过http等手段将请求提交至第三方平台，平台返回的数据也可放入datas
 	# datas将会回调至客户端
 	# 如果使用http访问，因为interfaces是单线程的，同步http访问容易卡住主线程，建议使用
-	# KBEngine.urlopen("https://www.baidu.com",onHttpCallback)异步访问。也可以结合异步socket的方式与平台交互（参考Poller.py)。
+	# KBEngine.registerReadFileDescriptor()和KBEngine.registerWriteFileDescriptor()结合
+	# KBEngine.urlopen("https://www.baidu.com",onHttpCallback)异步访问。也可以结合socket的方式与平台交互。
 	
 	KBEngine.createAccountResponse(commitName, realAccountName, datas, KBEngine.SERVER_SUCCESS)
 	
@@ -107,7 +112,8 @@ def onRequestAccountLogin(loginName, password, datas):
 	# 此处可通过http等手段将请求提交至第三方平台，平台返回的数据也可放入datas
 	# datas将会回调至客户端
 	# 如果使用http访问，因为interfaces是单线程的，同步http访问容易卡住主线程，建议使用
-	# KBEngine.urlopen("https://www.baidu.com",onHttpCallback)异步访问。也可以结合异步socket的方式与平台交互（参考Poller.py)。
+	# KBEngine.registerReadFileDescriptor()和KBEngine.registerWriteFileDescriptor()结合
+	# KBEngine.urlopen("https://www.baidu.com",onHttpCallback)异步访问。也可以结合socket的方式与平台交互。
 	
 	# 如果返回码为KBEngine.SERVER_ERR_LOCAL_PROCESSING则表示验证登陆成功，但dbmgr需要检查账号密码，KBEngine.SERVER_SUCCESS则无需再检查密码
 	KBEngine.accountLoginResponse(commitName, realAccountName, datas, KBEngine.SERVER_ERR_LOCAL_PROCESSING)
@@ -130,7 +136,14 @@ def onRequestCharge(ordersID, entityDBID, datas):
 	# 此处可通过http等手段将请求提交至第三方平台，平台返回的数据也可放入datas
 	# datas将会回调至baseapp的订单回调中，具体参考API手册charge
 	# 如果使用http访问，因为interfaces是单线程的，同步http访问容易卡住主线程，建议使用
-	# KBEngine.urlopen("https://www.baidu.com",onHttpCallback)异步访问。也可以结合异步socket的方式与平台交互（参考Poller.py)。
+	# KBEngine.registerReadFileDescriptor()和KBEngine.registerWriteFileDescriptor()结合
+	# KBEngine.urlopen("https://www.baidu.com",onHttpCallback)异步访问。也可以结合socket的方式与平台交互。
 	
 	KBEngine.chargeResponse(ordersID, datas, KBEngine.SERVER_SUCCESS)
 
+
+def onSqlCallback(result, rows, insertid, error):
+	DEBUG_MSG('onSqlCallback: result=%s, rows=%s, insertid=%s, error=%s' % (str(result), str(rows), str(insertid), str(error)))
+
+def onHttpCallback(httpcode, data, headers, success, url):
+	DEBUG_MSG('onHttpCallback: httpcode=%i, data=%s, headers=%s, success=%s, url=%s' % (httpcode, data, headers, str(success), url))
