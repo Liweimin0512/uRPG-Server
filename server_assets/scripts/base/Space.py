@@ -71,22 +71,23 @@ class Space(KBEngine.Entity, GameObject):
 		"""
 		出生怪物
 		"""
-		if len(self.tmpCreateEntityDatas) <= 0:
-			self.delTimer(tid)
-			return
+		# if len(self.tmpCreateEntityDatas) <= 0:
+		# 	self.delTimer(tid)
+		# 	return
 			
-		datas = self.tmpCreateEntityDatas.pop(0)
+		# datas = self.tmpCreateEntityDatas.pop(0)
 		
-		if datas is None:
-			ERROR_MSG("Space::onTimer: spawn %i is error!" % datas[0])
+		# if datas is None:
+		# 	ERROR_MSG("Space::onTimer: spawn %i is error!" % datas[0])
 
-		KBEngine.createEntityAnywhere("SpawnPoint", 
-									{"spawnEntityNO"	: datas[0], 	\
-									"position"			: datas[1], 	\
-									"direction"			: datas[2],		\
-									"modelScale"		: datas[3],		\
-									"createToCell"		: self.cell})
-				
+		# KBEngine.createEntityAnywhere("SpawnPoint", 
+		# 							{"spawnEntityNO"	: datas[0], 	\
+		# 							"position"			: datas[1], 	\
+		# 							"direction"			: datas[2],		\
+		# 							"modelScale"		: datas[3],		\
+		# 							"createToCell"		: self.cell})
+		pass
+
 	def loginToSpace(self, avatarEntityCall, context):
 		"""
 		defined method.
